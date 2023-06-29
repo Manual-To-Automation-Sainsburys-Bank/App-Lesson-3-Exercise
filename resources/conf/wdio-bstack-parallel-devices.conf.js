@@ -3,31 +3,27 @@ var _ = require("lodash");
 
 var overrides = {
   specs: [
-    "./test/specs/e2e/e2e.spec.js",
-    "./test/specs/login/*.spec.js",
-    "./test/specs/offers/*.spec.js",
-    "./test/specs/user/*.spec.js",
-    "./test/specs/cart/*.spec.js",
+    "./test/specs/textfield.spec.js"
   ],
   services: [['browserstack']],
 
   capabilities: [
     {
       maxInstances: 2,
-      device: "Samsung Galaxy A51",
-      os_version: "10.0",
-      app: "bs://<android-app-id>",
+      device: "Samsung Galaxy S23",
+      os_version: "13.0",
+      app: "SB_App_Lesson4_Android",
       autoGrantPermissions: true,
       platformName: "Android",
     },
     {
       maxInstances: 2,
-      device: "iPhone 12 Pro",
+      device: "iPhone 14",
       platformName: "iOS",
-      os_version: "14",
+      os_version: "16",
       gpsEnabled: "true",
       automationName: "XCUITest",
-      app: "bs://<ios-app-id>",
+      app: "SB_App_Lesson4_iOS",
     },
   ],
 };
